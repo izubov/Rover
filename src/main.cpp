@@ -18,6 +18,8 @@
 #define rcInterruptPin 3 // rc channel pin
 #define rcChannelCount 6 // rc channel count (4 but may be 2)
 
+Servo servo;
+
 unsigned long RcToServo(unsigned long pwm);
 unsigned long RcToEngine(unsigned long pwm);
 
@@ -29,7 +31,6 @@ unsigned long enginPowerBackward = 0;
 int start;
 
 PPMReader ppm(rcInterruptPin, rcChannelCount);
-
 
 void setup()
 {
